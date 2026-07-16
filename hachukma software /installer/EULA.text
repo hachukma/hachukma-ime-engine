@@ -1,1 +1,47 @@
+Hachukma Script IME License Agreement
+
+Copyright (c) 2026 Anan Debbarma  
+Author: Anan Debbarma  
+Contact: hachukma@gmail.com
+
+This software and its accompanying font files are the property of the copyright holder.
+
+1. Unicode Private Use Area (PUA) Disclaimer
+
+The Hachukma Script IME uses a custom script font encoded in the Unicode Private Use Area (PUA).
+
+- These character assignments are not official Unicode allocations. They are temporary or experimental mappings for presentation and testing purposes.
+- Text written using this IME may not render correctly on systems that do not have this specific font installed.
+- Future versions of this script, if submitted to the Unicode Consortium, may use different codepoints. Backward compatibility is not guaranteed.
+- Users are advised to keep a copy of this IME and font to properly view any documents created with it.
+
+2. Script Status Disclaimer
+
+The Hachukma script as implemented in this IME is currently in the presentation and development stage.
+
+- This script has not yet been submitted for final approval to the Government of Tripura, the Government of India, or the Unicode Consortium.
+- No claim is made that this script is already an officially recognized writing system for administrative or legal purposes.
+- The author is actively working on the script's development. Recognition, if pursued, would be a future process.
+
+3. Permitted Uses
+
+Permission is granted to install and use this software for personal, educational, research, and cultural presentation purposes.
+
+4. Prohibited Actions
+
+You may not:
+
+- Modify or redistribute the software or font files without prior written permission from the author.
+- Remove or alter any copyright or disclaimer notices.
+- Sell, sublicense, or commercialize the software or font files without written authorization.
+
+5. No Warranty
+
+This software is provided "as is", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or interoperability with future systems. The author shall not be liable for any data loss or rendering issues arising from use of this software.
+
+6. Acceptance of Terms
+
+By installing, copying, or using this software, you acknowledge that you have read, understood, and agree to be bound by all the terms above, including the understanding that the script is in a presentation stage and uses unofficial PUA encoding.
+
+
 
