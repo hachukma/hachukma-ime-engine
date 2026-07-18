@@ -1,1 +1,37 @@
+name: Build Windows Installer
 
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Download Inno Setup
+      run: |
+        $url = "https://jrsoftware.org/download.php/is.exe"
+        $path = "C:\inno-setup.exe"
+        Invoke-WebRequest -Uri $url -OutFile $path
+        & $path /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
+      shell: powershell
+    
+    - name: Build Windows Installer
+      run: |
+        cd "Hachukma software\installers"
+        "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
+      shell: cmd
+    
+    - name: Upload to Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: Hachukma software/installers/Output/Hachukma-IME-Installer.exe
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
