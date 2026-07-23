@@ -4,11 +4,87 @@ import random
 import time
 from constants import MAPPINGS
 
-ROMAN_WORDS = [
-    "kaham", "hamya", "chung", "norok", "borok", "kho", "thai",
-    "kəlai", "bəlai", "səlai", "kurui", "watui", "kəbang", "məkhang",
-    "səi", "mokol", "phaidi", "thangdi", "khəna", "ang", "boh",
-    "khənai", "mokhora", "mora", "kura"
+
+
+# 445 totals words added
+ROMAN_WORDS = [ "awang",
+  "bacha", "khunju", "nahar", "nono", "norok", "nəng", 
+  "phai", "tabuk", "takhukrok,", "tamo", "tei", "thang", "aboni", "abono",
+  "ang", "ani", "apha", "aphuru", "ba", "bini", "bo", "borok", "bəsa", "bəsano",
+  "bərəima", "bəkhnai", "chini", "choba", "ha", "joto", "juda",
+  "kaham","kerongno", "khajak", "khoroksa", "kothoma", "kotor", "kəplai",
+  "kəthar", "kəthəi", "lamthai", "langma", "musi",  "naisik", "nokhao",
+  "nono", "norok", "norokni", "nɘng", "orono", "phola", "sinai",
+
+
+  "sindrai", "səkango", "ta", "takhukrok", "tamni", "tamo",                       
+  "tatal", "tei", "tong", "təimuk", "ulo", "yak", "yang", "abo", "achugui",
+  "achuk", "achukjak", "agi", "agini", "agibo", "ainani", "aitor", "ama",
+  "amjokna", "ano", "antəi", "aphuru", "arirokno", "aro", "aroni",
+  "asək", "athukiri",  "bacha", "bachai", "bagəi", "bai", "baithang",
+  "baksa", "bao", "bebak", "bedek", "belai", "bera", "bini", "birjak", "birman",
+  "birəi", "bisingni", "bisiktham", "bithi", "bləisa", "bobo", "boh", "bohok",
+  "bono", "bori", "borok", "borokrok", "bororokni",
+  "bororokno", "bosong", "bosong,", "bosongni,", "bosongno", "brum", "brəi",
+  "brəio", "bujak", "bukhuk", "bukhugo", "bului", "bumukhang", "bumun", "buro",
+
+
+  "buya", "bəcha", "bəchap", "bədam", 
+
+  "bərirokno", "bərəima", "bərəi", "bəskang", "bəthai",                       
+  "bətəino", "cha", "chadi", "chana", "chap", "chini", "chirikhok", "chirik",
+  "choba", "chəngsacha", "chərai", "da", "daina", "dakti", "di", "dolsa",
+  "dopha", "dumjak", "eba", "garing", "glak", "gosinai", "gosio", "gədal",
+  "gənang", "haino", "hai", "hambai", "hamjak", "hamya", "hao", "hasing",
+  "hatai", "haya", "holong", "homchang", "hor", "horljaini", "huijak", "hən",
+  "hənjak", "həno", "hənəi", "jabra", "jak", "jolijak", "jora", "jorsa",
+  "jotoni", "jotono", "kaisa", "kangsa", "kangnəi", "kanjak", "kaya",                       
+  "kebeng", "kebo", "kha", "khaching", "khajaknaino;", "khajuri", "khak",
+  "khaksa", "khakthamni", "kham", "khar", "kharəi", "kheno", "khibinai",
+  "khitar", "khlai", "kho", "khobjak,", "khogəi", "khok", "kholob", "khorang",
+  "khoroksa", "khoroksani", "khoroksano", "khoroktham", "khulum", "khəi",
+  "kiching", "kirima", "kiri", "kisa", "klaijak", "klai", "klaiəi", "kok",
+  "kolok",  "kotor", "kotorma", 
+
+
+  "kotoino", "kotor rok", "kothor", "kubui", 
+  "kuphur", "kuphurbo", "kuplung", "kutung", "kutung", "kusu", "kutukma",
+  "kəbangma", "kəbangma", "kəchak", "kəchak.", "kəchang", "kəchar",                  
+  "kəcharo", "kəcharni", "kəchəng", "kəkhrang", "kəma", "kəmai", "kənəi",                     
+  "kəplai", "kəplairok", "kərəi", "kərəng", "kəsa", "kətal", "kəthang",                       
+  "kəthar", "kəthəi", "kəthəngrok", "kətəi",  "lai",
+  "laijak", "laina", "laio", "laiəi", "lam", "lama", 
+
+
+  "langta", "lobmani", "logi", "mani", "mano", "manthok", "manəi", "mari",
+  "masano", "modu", "motok", "muchung", "muchungma", "muktəi", "mung",              
+  "mungsa", "məsa", "naidi", "nang", "nango", "nini", "nobar", "nogo",
+  "nok", "nokha", "norok", "norokbo", "norokni", "nugui", "nugo", "nuhur",
+  "nuk", "nukjak", "nukmani", "nəng", "nəngjak", "okra", "omo", "ongkhor",
+  "ongkhlai", "paibo", "pai", "painai", "phaina", "phan", "phano", "phataro",
+  "philik", "phiya", "phiyok", "phunuk", "phunukna", "phunuknai",
+  "pohor", "pətap", "pətapsa", "raidang", "rak", "ri", "riphrik",   
+  
+  
+  "rogo", "rohor", "rohorjak", "rohorjaknai", "rom", "romo", "rə",
+  "rəjak", "rəjakma", "rəjaknai", "rəjagəi", "rəkhtharjak", "rəma", "rəmani",
+  "rəmano", "rənai", "rəng", "sa", "sabo", "sai", "sajak", "sak",
+  "saka", "saklaina", "sal", "salbo", "salkabaini", "salo", "salsani",
+  "saltham", "sama", "samani", "samano", "sanai", "sao,", "satok", "satokjak",
+  "seleng", "seng", "sengkrak", "sicha", "sikla", "sikok", "simi",
+  "simino", "sina", "sini", "sinino", "sio", "sitra", "skango", "smai",
+  "snamjak", "snamnai", "snamo", "sokdi", "songni", "səi", "səijak",
+  "səkdi", "səkagəi", "səkak", "səkakma", "səkango", "səndək", "səng",    
+  
+  
+  "səngchar", "səngcharni", "səngcharno", "takhuk", "tak",
+  "tal", "tamni", "tamna", "tamono", "tang", "tangma", "tangmani",
+  "tangna", "tangnai", "tangsa", "tapsa", "tatal", "tei", "tekto", "tektoni",
+  "thai", "thango", "thani", "thəi", "thəima", "toling", "tongdi", "təi",
+  "təimuk", "ulo", "əng", "əngjak", 
+  "yabrəi", "yachak", "yakung", "yaksi", "yang", "yaphango",
+  "yapharjak", "yarok", "yarokno", "yasku" ,"watəi" , "wa","wasung" , "wacheng" ,"thang",
+
 ]
 NUM_WORDS = 10
 
