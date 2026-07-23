@@ -48,7 +48,7 @@ ROMAN_WORDS = [ "awang",
 
 
   "kotoino", "kotor rok", "kothor", "kubui", 
-  "kuphur", "kuphur", "kuplung", "kutung", "kutung", "kusu", "kutukma",
+  "kuphur", "kuplung", "kutung", "kutung", "kusu", "kutukma",
   "kəbangma", "kəbangma", "kəchak", "kəchak.", "kəchang", "kəchar",                  
   "kəcharo", "kəcharni", "kəchəng", "kəkhrang", "kəma", "kəmai", "kənəi",                     
   "kəplai", "kəplairok", "kərəi", "kərəng", "kəsa", "kətal", "kəthang",                       
