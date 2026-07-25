@@ -21,12 +21,10 @@ def setup_pua_register(app):
     # Subtitle removed per user request
 
     # Explanatory paragraph about PUA / Unicode status
-   info_text = (
-    "Hachukma currently uses private-use code points rather than official Unicode PUA-registered code points. "
-    "A Unicode registration proposal will not be created until the relevant standards body accepts the script. "
-    "Until that approval is granted, Hachukma remains provisional in the unregistered PUA space, and users should prefer "
-    "standard Unicode solutions where available."
-     )
+    info_text = (
+        "Hachukma currently does not use registered PUA code points and has not submitted any PUA registration proposal. "
+        "This status will remain until the Hachukma script is accepted by both the Kokborok speakers and the relevant standards body."
+    )
 
     info_msg = tk.Message(main_frame, text=info_text, width=900,
                           font=("Segoe UI", 10), bg=app.bg_color, fg=app.fg_color, justify="left")
