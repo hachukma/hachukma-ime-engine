@@ -31,8 +31,8 @@ for ch, glyph in MAPPINGS.items():
 
 CHART_DATA = [
     ('\uE00A', '/a/ng'),
-    ('\uE00B', '/b/uphang-kɘthɘi'),
-    ('\uE00C', '/ch/ɘng'),
+    ('\uE00B', '/b/uphang-kəthəi'),
+    ('\uE00C', '/ch/əng'),
     ('\uE00D', '/d/angdol'),
     ('\uE00E', '/e/imang'),
     ('\uE00F', '/ph/arok'),
